@@ -20,7 +20,7 @@ In this lab, we'll use pandas dataframes to explore the titanic dataset!
 ### Pandas and DataFrames
 
 
-Dataframes are at the core of the pandas library--they're what makes pandas so powerful for reading, manipulating, and storing data.  Dataframes allow us to to couple the power of python programming and scripting with the ease of use and intuitiveness of spreadsheets.  In this lab, we're going to explore some of the basic functionality of the `DataFrame` class in pandas by exploring the _Titanic Dataset_.
+Dataframes are at the core of the pandas library--they're what makes pandas so powerful for reading, manipulating, and storing data.  Dataframes allow us to couple the power of python programming and scripting with the ease of use and intuitiveness of spreadsheets.  In this lab, we're going to explore some of the basic functionality of the `DataFrame` class in pandas by exploring the _Titanic Dataset_.
 
 **_Run the cell below to import all the necessary libraries for this lab._**
 
@@ -173,7 +173,7 @@ Great job! We'll continue by learning how to read in external data sets stored i
 
 One of the handiest pieces of functionality pandas provides is the ability to read in massive data sets with only a single line of code. The pandas library does this by providing a helper function for each of the common files types that typically store data--[read_csv()](http://pandas.pydata.org/pandas-docs/version/0.23/generated/pandas.read_csv.html), [read_excel()](http://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.read_excel.html), [read_json()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html), [read_sql()](http://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.read_sql.html), and even [read_clipboard()](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_clipboard.html), and many others! All of these functions provide simple ways for us to read in datasets and store them in a pandas DataFrame.  
 
-The dataset we'll be working with in this lab is stored in the file `titanic.csv`.  Use the **_read_csv()_** method and pass in the relative path of the file we'll be reading as a string (the file is stored in the same directory as this jupyter notebook, so the relative path will consist only of the file name).  
+The dataset we'll be working with in this lab is stored in the file `titanic.csv`.  Use the **`read_csv()`** method and pass in the relative path of the file we'll be reading as a string (the file is stored in the same directory as this jupyter notebook, so the relative path will consist only of the file name).  
 
 Store the dataframe inside of the variable `titanic_df`.  Access it after you've read it in to display the contents, so that we can begin exploring the data we'll be working with.  
 
@@ -5112,7 +5112,7 @@ rows_10_to_20
 
 ### Descriptive Statistics for our DataFrame
 
-Another common way to explore a new dataset is to take a look at the descriptive statistics, get to get quick feel for everything.  This is a common operation in Data Science, so pandas has provided a quick way to access descriptive statistics.  For any pandas Dataframe (or Series!), all we need to do is call the `.describe()` method to see the summary statistics for the data it contains. 
+Another common way to explore a new dataset is to take a look at the descriptive statistics to get quick feel for everything.  This is a common operation in Data Science, so pandas has provided a quick way to access descriptive statistics.  For any pandas Dataframe (or Series!), all we need to do is call the `.describe()` method to see the summary statistics for the data it contains. 
 
 In the cell below, call the `titanic_df`'s `.describe()` method. 
 
@@ -6876,7 +6876,7 @@ titanic_df.isna().sum()
 
 Ah, there we go.  We can see from the output above that `Embarked` has 2 null values, `Age` has 177, and `Cabin` has a whopping 687.  There are many ways to deal with null values.  If the only null values in the dataset were the 2 in the `Embarked` column, the easiest solution would probably be to just drop the rows containing null values by calling `titanic_df.dropna()`.  However, in it's current format, this is a _bad idea_, because we would dropping at least 687 rows, and possibly more, in a dataset that only contains 891.  
 
-Don't worry if you're not quite sure how you would deal with these null values yet--we'll cover this in depth in a future lab.  The goal of this section was just to get a handle on how to check for null values, not deal strategies for dealing with them.  
+Don't worry if you're not quite sure how you would deal with these null values yet--we'll cover this in depth in a future lab.  The goal of this section was just to get a handle on how to check for null values, not how to deal with them.  
 
 ### Plotting our Data
 
