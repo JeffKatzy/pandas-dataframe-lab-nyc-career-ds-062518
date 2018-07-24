@@ -245,3 +245,14 @@ In this lab, we got familiar with the pandas `DataFrame` class.  We learned how 
 * Checked for null values
 * Get descriptive statistics on our DataFrame
 * Plot data from our DataFrame as a histogram, binned or unbinned
+
+## Bonus Questions
+
+
+Don't use for loops!
+
+1. Suppose the Titanic collected money for the fares after the trip is over. If this was the case, how much money were they able to collect from the surviving passengers?
+
+
+2. You're performing an analysis on the names of passengers. You want your analysis to be case insenstive, so you decide to capitalize every name in the Name column. Return the updated dataframe (_Hint_ : look into the apply function)
+
