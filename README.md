@@ -5,7 +5,7 @@
 
 ### Problem Statement
 
-In this lab, we'll use pandas dataframes to explore the titanic dataset!
+In this lab, we'll use pandas dataframes to explore the _Titanic Dataset_! This dataset is contains characteristics of passengers on the titanic such as age, class, gender, and most importantly, whether or not they survived.
 
 ### Objectives
 
@@ -41,7 +41,7 @@ Running the example code in the cell below to create a sample dataframe.  Then, 
 
 
 ```python
-example_df = None
+example_df = pd.DataFrame({'Column 1': ['a', 'b', 'c'], 'Column 2': [1, 2, 3]})
 example_df
 ```
 
@@ -183,7 +183,7 @@ rows_10_to_20
 
 ### Descriptive Statistics for our DataFrame
 
-Another common way to explore a new dataset is to take a look at the descriptive statistics to get a quick feel for everything.  This is a common operation in Data Science, so pandas has provided a quick way to access descriptive statistics.  For any pandas Dataframe (or Series!), all we need to do is call the `.describe()` method to see the summary statistics for the data it contains. 
+Another common way to explore a new dataset is to take a look at the descriptive statistics, get to get a quick feel for everything.  This is a common operation in Data Science, so pandas has provided a quick way to access descriptive statistics.  For any pandas Dataframe (or Series!), all we need to do is call the `.describe()` method to see the summary statistics for the data it contains. 
 
 In the cell below, call the `titanic_df`'s `.describe()` method. 
 
@@ -214,7 +214,7 @@ In the cell below, call `titanic_df.isna().sum()`.
 
 Ah, there we go.  We can see from the output above that `Embarked` has 2 null values, `Age` has 177, and `Cabin` has a whopping 687.  There are many ways to deal with null values.  If the only null values in the dataset were the 2 in the `Embarked` column, the easiest solution would probably be to just drop the rows containing null values by calling `titanic_df.dropna()`.  However, in it's current format, this is a _bad idea_, because we would dropping at least 687 rows, and possibly more, in a dataset that only contains 891.  
 
-Don't worry if you're not quite sure how you would deal with these null values yet--we'll cover this in depth in a future lab.  The goal of this section was just to get a handle on how to check for null values, not how to deal with them. 
+Don't worry if you're not quite sure how you would deal with these null values yet--we'll cover this in depth in a future lab.  The goal of this section was just to get a handle on how to check for null values, not how to deal with them.
 
 ### Plotting our Data
 
